@@ -1,9 +1,7 @@
-# EXPERIMENT-01-ALP FOR 8086
- Name : JYESVANTHE V
- 
- Roll no : 212223110018
-
- Date of experiment : 
+## Name : JYESVANTHE V
+## Roll no : 212223110018
+## EXPERIMENT-01:ALP FOR 8086
+## Date of experiment : 
 
 
 
@@ -79,152 +77,122 @@ Running The Emulator (emu8086) Intro 8086 Microprocessor Emulator, also known as
 
 ## Programs for arithmetic  operations
 
-## Addition  of 8 bit ALP 
+## Addition  of 16-bit ALP: 
+
 ```
-MOV CL,00
-MOV AX,[3001H]
-MOV BX,[3003H]
-ADD AX,BX
-RET
+org 100h
+mov ax,5aa3h
+mov bx,776fh 
+mov ax,[bx]
+add ax,bx
+ret 
+
 ```
 
 ## Output  
-<img width="1919" height="1017" alt="1 ADD" src="https://github.com/user-attachments/assets/601943e1-11c2-4c2b-bfb3-1461dd697086" />
+<img width="1198" height="781" alt="Screenshot 2025-08-21 143521" src="https://github.com/user-attachments/assets/101cdaa9-449b-4634-b4e9-caa1d2f5c39f" />
 
 
  
-## Subtraction   of 8 bit numbers  ALP 
+## Subtraction  of 16-bit ALP 
 ```
-MOV CL,00
-MOV AX,[3001H]
-MOV BX,[3003H]
-SUB AX,BX
-RET     
+org 100h
+mov ax,5aa3h   
+mov [4567h],8bcdh
+mov cx,[4567h] 
+mov cx,ax
+sub ax,cx
+ret
 ```
  
 ## Output  
-<img width="1911" height="1017" alt="2 SUB" src="https://github.com/user-attachments/assets/5c6e4eac-e99e-4d65-9fa6-d6b18c822075" />
+<img width="1327" height="809" alt="Screenshot 2025-08-21 144252" src="https://github.com/user-attachments/assets/b967ca3d-8097-4423-982a-d3d33460af62" />
 
-## Multiplication alp 
+
+## Multiplication of 16-bit ALP: 
 ```
-MOV AX,[3001H]
-MOV BX,[3003H]
-MUL BX
-MOV [3005H],AX
-MOV [3007H],DX
-RET
+org 100h
+mov ax,5aa3h 
+mov bx,2cdbh
+mul ax
+ret
 ```
  ## Output  
 
-<img width="1905" height="1014" alt="3 MUL" src="https://github.com/user-attachments/assets/0e45007c-d456-408d-b772-76fefbf1ccf9" />
+<img width="1241" height="791" alt="Screenshot 2025-08-21 133927" src="https://github.com/user-attachments/assets/88f5e026-cd81-4d77-b674-f0e5bf9d225f" />
 
 
-## Division alp 
+## Division of 16-bit ALP: 
 ```
-MOV AX,[3001H]
-MOV BX,[3003H]
-DIV BX
-MOV [3005H],AX
-MOV [3007H],DX
-RET
+org 100h
+mov ax,5aa3h 
+mov bx,[2cdbh]
+div bx
+ret
+
+
 ```
 
 ## Output  
-<img width="1909" height="1016" alt="4 DIV" src="https://github.com/user-attachments/assets/7f4590b0-8771-4a0b-824e-491492f14cee" />
+<img width="1236" height="786" alt="Screenshot 2025-08-21 134218" src="https://github.com/user-attachments/assets/526569b1-f79b-4fed-adcf-89681d0b646c" />
 
-## LOGICAL OPERATIONS
+## Program for Logical Operations:
 
-
-
-
-## AND alp
+## AND operation of 8-bit ALP:
 ```
-MOV AX,[3001H]
-MOV BX,[3003H]
-AND AX,BX
-MOV [3005H],AX
-RET
+org 100h
+mov ax,5aa3h 
+mov bx,8090h
+mov ax,[bx]
+and ax,bx
+ret
 ```
-## Output
-<img width="1903" height="1017" alt="5 AND" src="https://github.com/user-attachments/assets/be13f2d4-3ca7-47f6-a0e0-072557b6eca1" />
+## Output:
 
-## OR alp
-```
-MOV AX,[3001H]
-MOV BX,[3003H]
-OR AX,BX
-MOV [3005H],AX
-RET
-```
-## Output
-<img width="1907" height="1010" alt="7 OR" src="https://github.com/user-attachments/assets/1cde2cf4-abfb-4626-ac7a-b8bd62a0cd53" />
+<img width="1190" height="771" alt="Screenshot 2025-08-21 134517" src="https://github.com/user-attachments/assets/b8e05f02-b8cc-4e6b-823e-70c0e22fb27a" />
 
-## NAND alp
+## OR operation for 8-bit ALP :
 ```
-MOV AX,[3001H]
-MOV BX,[3003H]
-AND AX,BX
-NOT AX
-MOV [3005H],AX
-RET
+org 100h
+mov ax,5aa3h 
+mov bx,8090h
+or ax,bx
+ret
 ```
-## Output
-<img width="1902" height="1022" alt="6 NAND" src="https://github.com/user-attachments/assets/039eb0cb-c020-4e83-8ece-ece35cd65014" />
-
-## NOR alp
-```
-MOV AX,[3001H]
-MOV BX,[3003H]
-OR AX,BX
-NOT AX
-MOV [3005H],AX
-RET
-```
-## Output
-<img width="1908" height="1014" alt="8TH NOR" src="https://github.com/user-attachments/assets/68d86f8c-11ff-4aa7-858c-0d1cde714887" />
+## Output:
+<img width="1309" height="778" alt="Screenshot 2025-08-21 134722" src="https://github.com/user-attachments/assets/5dfca25b-b0e0-48bb-a478-43d81dbdc9f3" />
 
 
+## NOT operation for 8-bit ALP:
+```
+org 100h
+mov ax,5aa3h 
+mov bx,[8090h]
+not bx
+ret
+```
+## Output:
+<img width="1190" height="758" alt="Screenshot 2025-08-21 134906" src="https://github.com/user-attachments/assets/f6815ff2-7b46-4bdf-a477-91804b41295a" />
 
-## NOT alp
+## XOR operation for 8-bit ALP:
 ```
-MOV AX,[3001H]
-MOV BX,[3003H]
-NOT AX
-MOV [3005H],AX
-RET
+org 100h
+mov ax,5aa3h  
+mov bx,[8090h]  
+mov ax,[bx]
+xor ax,bx
+ret 
 ```
-## output
-<img width="1910" height="1017" alt="9 NOT" src="https://github.com/user-attachments/assets/19d4a2fc-74b1-496e-8a84-adb7abf10316" />
+
+## Output:
+<img width="1189" height="779" alt="Screenshot 2025-08-21 135111" src="https://github.com/user-attachments/assets/b571fbe5-924a-4e78-958d-bf212810d7fb" />
 
 
-## XOR alp
-```
-MOV AX,[3001H]
-MOV BX,[3003H]
-XOR AX,BX
-MOV [3005H],AX
-RET
-```
-## output
-<img width="1910" height="1011" alt="10 XOR" src="https://github.com/user-attachments/assets/6333c93b-28a2-45bf-811d-c83d055a57a5" />
-
-
-## XNOR alp
-```
-MOV AX,[3001H]
-MOV BX,[3003H]
-XOR AX,BX
-NOT AX
-MOV [3005H],AX
-RET
-```
-## output
-<img width="1910" height="1015" alt="11 XNOR" src="https://github.com/user-attachments/assets/5e183e90-126a-4ffb-931d-8e165f523dbb" />
 
 
 ## Result :
- 
-The Write and execute ALP on fundamental arithmetic and logical operations is executed successfully.
+Thus, to write and execute ALP on fundamental arithmetic and logical operations is successfully executed
+
 
 
 
