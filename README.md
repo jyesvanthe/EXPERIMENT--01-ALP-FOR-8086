@@ -85,12 +85,7 @@ MOV CL,00
 MOV AX,[3001H]
 MOV BX,[3003H]
 ADD AX,BX
-JNC Loop
-INC CL
-Loop:
-MOV [3005H],AX
-MOV [3007H],CL
-HLT 
+RET
 ```
 
 ## Output  
@@ -104,14 +99,7 @@ MOV CL,00
 MOV AX,[3001H]
 MOV BX,[3003H]
 SUB AX,BX
-JNC Loop
-INC CL  
-NOT AX
-INC AX
-Loop:
-MOV [3005H],AX
-MOV [3007H],CL
-HLT      
+RET     
 ```
  
 ## Output  
@@ -124,7 +112,7 @@ MOV BX,[3003H]
 MUL BX
 MOV [3005H],AX
 MOV [3007H],DX
-HLT
+RET
 ```
  ## Output  
 
@@ -138,7 +126,7 @@ MOV BX,[3003H]
 DIV BX
 MOV [3005H],AX
 MOV [3007H],DX
-HLT
+RET
 ```
 
 ## Output  
@@ -158,7 +146,7 @@ MOV AX,[3001H]
 MOV BX,[3003H]
 AND AX,BX
 MOV [3005H],AX
-HLT
+RET
 ```
 ## Output
 <img width="1903" height="1017" alt="5 AND" src="https://github.com/user-attachments/assets/be13f2d4-3ca7-47f6-a0e0-072557b6eca1" />
@@ -169,7 +157,7 @@ MOV AX,[3001H]
 MOV BX,[3003H]
 OR AX,BX
 MOV [3005H],AX
-HLT
+RET
 ```
 ## Output
 <img width="1907" height="1010" alt="7 OR" src="https://github.com/user-attachments/assets/1cde2cf4-abfb-4626-ac7a-b8bd62a0cd53" />
@@ -181,7 +169,7 @@ MOV BX,[3003H]
 AND AX,BX
 NOT AX
 MOV [3005H],AX
-HLT
+RET
 ```
 ## Output
 <img width="1902" height="1022" alt="6 NAND" src="https://github.com/user-attachments/assets/039eb0cb-c020-4e83-8ece-ece35cd65014" />
@@ -193,7 +181,7 @@ MOV BX,[3003H]
 OR AX,BX
 NOT AX
 MOV [3005H],AX
-HLT
+RET
 ```
 ## Output
 <img width="1908" height="1014" alt="8TH NOR" src="https://github.com/user-attachments/assets/68d86f8c-11ff-4aa7-858c-0d1cde714887" />
@@ -206,7 +194,7 @@ MOV AX,[3001H]
 MOV BX,[3003H]
 NOT AX
 MOV [3005H],AX
-HLT
+RET
 ```
 ## output
 <img width="1910" height="1017" alt="9 NOT" src="https://github.com/user-attachments/assets/19d4a2fc-74b1-496e-8a84-adb7abf10316" />
@@ -218,7 +206,7 @@ MOV AX,[3001H]
 MOV BX,[3003H]
 XOR AX,BX
 MOV [3005H],AX
-HLT
+RET
 ```
 ## output
 <img width="1910" height="1011" alt="10 XOR" src="https://github.com/user-attachments/assets/6333c93b-28a2-45bf-811d-c83d055a57a5" />
@@ -231,7 +219,7 @@ MOV BX,[3003H]
 XOR AX,BX
 NOT AX
 MOV [3005H],AX
-HLT
+RET
 ```
 ## output
 <img width="1910" height="1015" alt="11 XNOR" src="https://github.com/user-attachments/assets/5e183e90-126a-4ffb-931d-8e165f523dbb" />
