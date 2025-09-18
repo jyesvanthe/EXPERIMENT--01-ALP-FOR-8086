@@ -1,9 +1,9 @@
-# EXPERIMENT--01-ALP-FOR-8086
+# EXPERIMENT-01-ALP FOR 8086
  Name : JYESVANTHE V
  
  Roll no : 212223110018
 
- Date of experiment : 18/08/2025
+ Date of experiment : 
 
 
 
