@@ -134,9 +134,6 @@ RET
 
 ## LOGICAL OPERATIONS
 
-## TRUTH TABLE FOR LOGICAL OPERATIONS
-
-![symbols-truth-tables-of-common-logic-gates](https://github.com/user-attachments/assets/6caae067-aca0-4b9c-83e3-d22429c1b3ec)
 
 
 
